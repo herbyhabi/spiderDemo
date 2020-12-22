@@ -29,11 +29,11 @@ def parse(url):
             style = sel.xpath('dd/ul/li[2]/span/text()')[0]
         except:
             style = ''
-        saveToCSV([name,place,s_type,nature,style],'school.csv')
+        saveToCSV([name,place,s_type,nature,style],'../files/school.csv')
 
 
 def saveToCSV(item, path):
-    with open(path, 'a', encoding='gbk', newline='') as file:
+    with open(path, 'a', encoding='utf-8', newline='') as file:
         writer = csv.writer(file)
         try:
             writer.writerow(item)

@@ -6,7 +6,7 @@ data1 = []
 data2 = []
 data3 = []
 
-with open('new.csv','r') as file:
+with open('files/filtered_school.csv','r') as file:
     reader = csv.reader(file)
     for i in reader:
         data1.append(i[0])
@@ -36,4 +36,4 @@ bar.add_xaxis(x1)
 bar.add_yaxis("本科", y1)
 bar.add_yaxis("专科", y2)
 bar.set_global_opts(title_opts=opts.TitleOpts(title="大学", subtitle="情况"))
-bar.render(path='bar.html')
+bar.render(path='files/school_bar.html')

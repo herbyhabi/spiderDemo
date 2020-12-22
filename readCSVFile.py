@@ -1,7 +1,7 @@
 import pandas as pd
-import spiderForSchool
+from spiders import spiderForSchool
 
-dl = pd.read_csv('school.csv', encoding='gbk', usecols=[1,3])
+dl = pd.read_csv('files/school.csv', encoding='utf-8', usecols=[1,3])
 datas = dl.values.tolist()
 # print(datas)
 # print(datas.head())# 读取前5行
@@ -33,7 +33,7 @@ print(list_bCount)
 print(list_jCount)
 
 for i in range(len(list_addr)-2):
-    spiderForSchool.saveToCSV([list_addr[i],list_bCount[i],list_jCount[i]],'new.csv')
+    spiderForSchool.saveToCSV([list_addr[i], list_bCount[i], list_jCount[i]], 'files/filtered_school.csv')
 
 
 
