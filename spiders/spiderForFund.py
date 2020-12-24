@@ -73,7 +73,7 @@ for i in funds:
     all_list = all_list + single_fund_data_list
 # print(net_worth_list)
 
-file_name = 'files/fund_info.json'
+file_name = '../files/fund_info.json'
 
 
 with open(file_name, 'a') as file:
